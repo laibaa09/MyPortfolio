@@ -31,22 +31,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* allows wrapping */
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   height: 100%;
+  padding: 10px 0;
 }
 
 .logo {
-  height: 150px; /* bigger logo */
-  width: 150px;
-  margin-top: -5px; /* overlap slightly if needed */
+  height: auto;
+  width: 120px;
+  max-width: 100%;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -75,6 +79,49 @@ header {
 .nav-links a:hover {
   color: #b084f7;
 }
+/* Hamburger menu button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #111;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 15px 20px;
+    border-top: 1px solid #222;
+  }
+}
+
 .intro {
   min-height: 100vh;
   display: flex;
@@ -219,6 +266,8 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 .portfolio-img {
+  width: 300px;
+  height: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
