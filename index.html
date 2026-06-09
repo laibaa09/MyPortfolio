@@ -3,194 +3,544 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laiba 3D Portfolio</title>
+  <title>Laiba — 3D Artist & Game Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
   <header>
-    <div class="navbar">
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-       <div class="navbarcontent">
-      <img src="assets/images/logo.png" alt="Logo" class="logo" />
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#intro">Home</a></li>
+    <span class="logo-text">Laiba.3D</span>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#models">3D Models</a></li>
+        <li><a href="#portfolio">Work</a></li>
         <li><a href="#contact">Contact</a></li>
-      </div>
       </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
     </div>
   </header>
 
-  <section id="intro" class="intro">
-    <div class="intro-content">
-      <h1>Hi, I'm Laiba</h1>
-      <p>
-        A passionate <span class="highlight">UI/UX Designer</span> and <span class="highlight">Unity Game Developer</span> crafting seamless digital experiences.
-        I blend creativity with functionality to design intuitive interfaces and bring interactive games to life.
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero">
+    <canvas id="particles"></canvas>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="hero-inner">
+      <span class="hero-eyebrow">3D Artist · Game Developer · UI/UX Designer</span>
+      <h1 class="hero-title">
+        Hi, I'm <span class="grad-text">Laiba</span><br>I Build Worlds
+      </h1>
+      <p class="hero-sub">
+        Crafting <strong>immersive 3D experiences</strong>, interactive games in Unity, and intuitive interfaces that live at the edge of art and technology.
       </p>
-      <p>
-        From Unity to Figma to frontend development, I build engaging experiences that are not only visually appealing, but also interactive and user-focused.
-      </p>
-      <a href="#portfolio" class="cta-button">View My Work</a>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="#portfolio" class="hero-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 3l14 9-14 9V3z"/></svg>
+          View My Work
+        </a>
+        <a href="assets/Laiba_CV.pdf" download class="hero-cta" style="background:transparent;border:1.5px solid rgba(124,92,252,.6);box-shadow:0 0 20px rgba(124,92,252,.2);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v13M5 16l7 7 7-7"/><path d="M3 21h18"/></svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <img src="assets/images/picture.jpg" alt="Laiba's Photo" class="about-img">
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section id="about">
+    <div class="about-grid reveal">
+      <div class="about-img-wrap">
+        <img src="assets/images/picture.jpg" alt="Laiba">
+      </div>
       <div class="about-text">
-        <p>Hi! I’m <strong>Laiba</strong>, a creative 3D artist and designer with a background in Software Engineering. I specialize in:</p>
-        <ul>
-          <li>🔷 3D Game Development using <strong>Unity Engine</strong></li>
-          <li>🔷 UI/UX Design with <strong>Figma</strong></li>
-          <li>🔷 Frontend Development using <strong>React & VS Code</strong></li>
-        </ul>
-        <p>I completed my <strong>Software Engineering</strong> degree from <strong>COMSATS University</strong>.</p>
-        <p>I’m currently based in <strong>Abbottabad</strong>, and I love working on visual storytelling and interactive design experiences.</p>
+        <p class="section-label">About Me</p>
+        <h2>Software Engineer<br>turned <span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">3D Creator</span></h2>
+        <div class="section-line"></div>
+        <p>I'm <strong>Laiba</strong>, a creative 3D artist and designer based in <strong>Abbottabad</strong>, with a Software Engineering degree from <strong>COMSATS University</strong>.</p>
+        <p>I love blending technical precision with artistic vision — whether that's sculpting a 3D environment, designing a game's visual identity, or building a pixel-perfect UI in Figma.</p>
+        <div class="skills-chips">
+          <span class="chip">Unity Engine</span>
+          <span class="chip">3D Modeling</span>
+          <span class="chip">Blender</span>
+          <span class="chip">Figma</span>
+          <span class="chip">React</span>
+          <span class="chip">HTML / CSS</span>
+          <span class="chip">Game Design</span>
+          <span class="chip">UI/UX</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="services" class="section">
-    <h2>Services</h2>
-    <div class="services">
-      <div class="service">
-        <h3>🎨 Games</h3>
-        <p>I create high-quality 3D games, animation, and product visualization.</p>
-      </div>
-      <div class="service">
-        <h3>🧩 UI/UX Design</h3>
-        <p>I design clean and functional interfaces using Figma, ensuring a great user experience.</p>
-      </div>
-      <div class="service">
-        <h3>💻 Frontend Development</h3>
-        <p>I build responsive, user-friendly websites using HTML, CSS, JavaScript, and modern frameworks like React.</p>
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section id="services">
+    <div class="max-w">
+      <p class="section-label reveal">What I Do</p>
+      <h2 class="section-title reveal">Services</h2>
+      <div class="section-line reveal"></div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-icon">🎮</span>
+          <h3>Game Development</h3>
+          <p>End-to-end 3D game development using Unity — from concept and level design to mechanics, animation, and shipping.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🧊</span>
+          <h3>3D Modeling & Art</h3>
+          <p>High-quality 3D assets, environments, characters, and product visualization with a focus on realism and stylized aesthetics.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon">🎨</span>
+          <h3>UI/UX Design</h3>
+          <p>Research-driven interface design using Figma — wireframes, high-fidelity prototypes, and full design systems.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section id="portfolio" class="section">
-    <h1 class="h1">My Work</h1>
-    
-    <h2>Games</h2>
-    <div class="project-row">
-      <div class="project-card">
-        <img src="assets/images/sample1.png" alt="Locked in Time Game" class="card-img">
-        <div class="project-text">
-          <h2>Locked in Time – 3D Game</h2>
-          <p>Locked in Time is an immersive escape-room game where every moment matters.
-Solve puzzles, uncover secrets, and break free before time runs out.</p>
-          <a href="https://www.figma.com/design/XzmPwHBydilcn4L87dw4Cs/Ajj-Kya-Pakai-?node-id=4-81&t=z2GqWguiBakbS6l4-1" target="_blank">Figma Link</a>
-          <br>
-          <button class="modal-btn" data-modal="modal-1">See Visuals</button>
-        </div>
-      </div>
-    </div>
+  <!-- ============================================================
+       3D MODELS
+  ============================================================ -->
+  <section id="models" style="background: var(--surface);">
+    <div class="portfolio-inner">
+      <p class="section-label reveal">Interactive</p>
+      <h2 class="section-title reveal">3D Models</h2>
+      <div class="section-line reveal"></div>
+      <p class="reveal" style="color:var(--muted);margin-bottom:2.5rem;max-width:600px;">
+        Drop your <code style="background:rgba(255,255,255,.06);padding:.15rem .4rem;border-radius:4px;font-size:.9em;">.glb</code> or <code style="background:rgba(255,255,255,.06);padding:.15rem .4rem;border-radius:4px;font-size:.9em;">.gltf</code> files into the <code style="background:rgba(255,255,255,.06);padding:.15rem .4rem;border-radius:4px;font-size:.9em;">assets/models/</code> folder and update the <code style="background:rgba(255,255,255,.06);padding:.15rem .4rem;border-radius:4px;font-size:.9em;">src</code> attributes below — they'll render interactively here.
+      </p>
 
-    <br><br>
-    
-    <h2>UI/UX Projects</h2>
-    <div class="project-row">
-      
-      <div class="project-card">
-        <img src="assets/images/Aj kya pakai ui.png" alt="Ajj Kya Pakai App" class="card-img">
-        <div class="project-text">
-          <h2>Ajj Kya Pakai? – Mobile App</h2>
-          <p>Design a mobile app that helps households decide what to cook based on the ingredients they already have at home.</p>
-          <a href="https://www.figma.com/design/XzmPwHBydilcn4L87dw4Cs/Ajj-Kya-Pakai-?node-id=4-81&t=z2GqWguiBakbS6l4-1" target="_blank">Figma Link</a>
-          <br>
-          <button class="modal-btn" data-modal="modal-2">See Visuals</button>
+      <div class="models-grid">
+
+        <!-- MODEL CARD — replace src with your .glb file path -->
+        <div class="model-card reveal">
+          <div class="model-viewer-wrap">
+            <!-- If model-viewer library loads, it shows the 3D model.
+                 Otherwise, replace with your own viewer or iframe. -->
+            <model-viewer
+              src="assets\images\helicopter.glb"
+              alt="Helipoter"
+              auto-rotate
+              camera-controls
+              shadow-intensity="1"
+              style="width:100%;height:280px;background:transparent;"
+              loading="lazy"
+              poster="assets/images/model1-poster.jpg">
+              <!-- Fallback placeholder shown while loading or if no model -->
+              <div class="model-placeholder" slot="poster">
+                <div class="ring-anim"></div>
+                <div class="ring-anim ring-anim-2"></div>
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32 4L58 18V46L32 60L6 46V18L32 4Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M32 4V60M6 18L32 32L58 18" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Model 1</span>
+              </div>
+            </model-viewer>
+          </div>
+          <div class="card-body">
+            <h3>Helicopter</h3>
+            <p style="color:var(--muted);font-size:.85rem;">Add your model description here — software used, poly count, purpose.</p>
+          </div>
         </div>
+
+        <!-- MODEL CARD 2 -->
+        <div class="model-card reveal">
+          <div class="model-viewer-wrap">
+            <model-viewer
+              src="assets\images\Train station.glb"
+              alt="3D Model 2"
+              auto-rotate
+              camera-controls
+              shadow-intensity="1"
+              style="width:100%;height:280px;background:transparent;"
+              loading="lazy"
+              poster="assets/images/model2-poster.jpg">
+              <div class="model-placeholder" slot="poster">
+                <div class="ring-anim"></div>
+                <div class="ring-anim ring-anim-2"></div>
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32 4L58 18V46L32 60L6 46V18L32 4Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M32 4V60M6 18L32 32L58 18" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Model 2</span>
+              </div>
+            </model-viewer>
+          </div>
+          <div class="card-body">
+            <h3>Train Station</h3>
+            <p style="color:var(--muted);font-size:.85rem;">Add your model description here.</p>
+          </div>
+        </div>
+<!-- MODEL CARD 2 -->
+        <div class="model-card reveal">
+          <div class="model-viewer-wrap">
+            <model-viewer
+              src="assets\images\wardrobe.glb"
+              alt="3D Model 2"
+              auto-rotate
+              camera-controls
+              shadow-intensity="1"
+              style="width:100%;height:280px;background:transparent;"
+              loading="lazy"
+              poster="assets/images/model2-poster.jpg">
+              <div class="model-placeholder" slot="poster">
+                <div class="ring-anim"></div>
+                <div class="ring-anim ring-anim-2"></div>
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32 4L58 18V46L32 60L6 46V18L32 4Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M32 4V60M6 18L32 32L58 18" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Model 2</span>
+              </div>
+            </model-viewer>
+          </div>
+          <div class="card-body">
+            <h3>Wodrobe</h3>
+            <p style="color:var(--muted);font-size:.85rem;">Add your model description here.</p>
+          </div>
+        </div>
+        <!-- MODEL CARD 3 -->
+        <div class="model-card reveal">
+          <div class="model-viewer-wrap">
+            <model-viewer
+              src="assets\images\environment.glb"
+              alt="3D Model 3"
+              auto-rotate
+              camera-controls
+              shadow-intensity="1"
+              style="width:100%;height:280px;background:transparent;"
+              loading="lazy"
+              poster="assets/images/model3-poster.jpg">
+              <div class="model-placeholder" slot="poster">
+                <div class="ring-anim"></div>
+                <div class="ring-anim ring-anim-2"></div>
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M32 4L58 18V46L32 60L6 46V18L32 4Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M32 4V60M6 18L32 32L58 18" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Model 3</span>
+              </div>
+            </model-viewer>
+          </div>
+          <div class="card-body">
+            <h3>Game Arena</h3>
+            <p style="color:var(--muted);font-size:.85rem;">Add your model description here.</p>
+          </div>
+        </div>
+
       </div>
 
-      <div class="project-card">
-        <img src="assets/images/webdevdesign.png" alt="Web Dev Design" class="card-img">
-        <div class="project-text">
-          <h2>Web Dev Design - Website</h2>
-          <p>WebDevDesign is a professional web design and development agency specializing in WordPress and offering full-service solutions.</p>
-          <a href="https://www.figma.com/design/v4r6868nQi7TZ7woxd6L0l/WebDevDesign?node-id=0-1&t=8Wx6dUvYNFitfHn4-1" target="_blank">Figma Link</a>
-          <br>
-          <button class="modal-btn" data-modal="modal-3">See Visuals</button>
-        </div>
+      <div class="model-upload-note reveal" style="margin-top:1.5rem;">
+        <strong style="color:var(--text);">To add more models:</strong> duplicate a model card above, change the <code>src</code> to your <code>.glb</code> file path, update the title and description. <br>
+        The <a href="https://modelviewer.dev" target="_blank" style="color:var(--cyan);">model-viewer</a> library supports drag-to-rotate and pinch-to-zoom on all devices.
       </div>
-
-      <div class="project-card">
-        <img src="assets\images\ss.png" alt="3D Lab UI" class="card-img">
-        <div class="project-text">
-          <h2>3D Lab UI Design</h2>
-          <p>This UI was designed for a 3D laboratory environment with a focus on clarity, usability, and immersion. The design aims to create an engaging experience.</p>
-        
-          <br>
-          <button class="modal-btn" data-modal="modal-4">See Visuals</button>
-        </div>
-      </div>
-
-            <div class="project-card">
-        <img src="assets\images\Main Menu.png" alt="3D Lab UI" class="card-img">
-        <div class="project-text">
-          <h2>AAA Game Project</h2>
-          <p>3D Survival Game based on Novel Robinson Cruse</p>
-          <a href="https://www.figma.com/design/OOJIT785nqxZUUhTZR3zjx/UI-UX-3-?node-id=50-491&t=NOPt6mTFZYae3ImT-0">Figma Link</a>
-          <br>
- 
-        </div>
-      </div>
-
-      <div class="project-card">
-        <img src="assets\images\exithymia.png" alt="3D Lab UI" class="card-img">
-        <div class="project-text">
-          <h2>Exithymia</h2>
-          <p>Indie Game: Escape House Game</p>
-          <a href="https://www.figma.com/design/hRMlC0LjmTm09CCGIhmePX/exithymia?node-id=0-1&p=f&t=9VGOWwcpRy8LNfRJ-0">Figma Link</a>
-          <br>
-          
-        </div>
-      </div>
-
-            <div class="project-card">
-        <img src="assets\images\intellica image.png" alt="3D Lab UI" class="card-img">
-        <div class="project-text">
-          <h2>Intellica</h2>
-          <p>LMS Mobile Application</p>
-          <a href="https://www.figma.com/design/QaqpSItTjtWChvnDG1rvoK/Prototype-draft-2?t=qtAzwL4uRG4e3Mwi-0">See Details</a>
-          <br>
-          <button class="modal-btn" data-modal="modal-7">Figma Prototype</button>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: laibaanaeem002@gmail.com</p>
-    <p>Phone: +923265676908</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/laiba-naeem-350b92264/" target="_blank">linkedin.com/LaibaNaeem</a></p>
+  <!-- ============================================================
+       PORTFOLIO
+  ============================================================ -->
+  <section id="portfolio">
+    <div class="portfolio-inner">
+      <p class="section-label reveal">Selected Work</p>
+      <h2 class="section-title reveal">Projects</h2>
+      <div class="section-line reveal"></div>
+
+      <!-- Games -->
+      <div class="portfolio-group reveal">
+        <p class="group-title">Games</p>
+        <div class="cards-grid">
+
+          <div class="project-card reveal">
+            <div class="card-thumb">
+              <img src="assets/images/sample1.png" alt="Locked in Time">
+              <div class="card-overlay">
+                <button class="btn-primary modal-btn" data-modal="modal-1">▶ Watch Video</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Locked in Time — 3D Escape Game</h3>
+              <p>An immersive escape-room experience built in Unity. Solve puzzles, uncover secrets, and break free before time runs out.</p>
+              <div class="card-actions">
+                <a href="https://github.com/laibanaeem" target="_blank" class="btn-outline">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub ↗
+                </a>
+                <button class="btn-primary modal-btn" data-modal="modal-1">▶ Watch Video</button>
+              </div>
+            </div>
+          </div>
+ <div class="project-card reveal">
+            <div class="card-thumb">
+              <img src="assets\images\lab1.jpeg" alt="Locked in Time">
+              <div class="card-overlay">
+                <button class="btn-primary modal-btn" data-modal="modal-1">▶ Watch Video</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>3D Lab Experiments</h3>
+              <p>An immersive escape-room experience built in Unity. Solve puzzles, uncover secrets, and break free before time runs out.</p>
+              <div class="card-actions">
+                <a href="https://github.com/laibanaeem" target="_blank" class="btn-outline">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub ↗
+                </a>
+                <button class="btn-primary modal-btn" data-modal="modal-12">▶ Watch Video</button>
+              </div>
+            </div>
+          </div>
+     <div class="project-card reveal">
+            <div class="card-thumb">
+              <img src="assets/images/ss.png" alt="3D Lab UI">
+              <div class="card-overlay">
+                <button class="btn-primary modal-btn" data-modal="modal-4">View Visuals</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>3D Lab — Immersive UI</h3>
+              <p>UI designed for a 3D laboratory environment with a focus on clarity, usability, and deep immersion.</p>
+              <div class="card-actions">
+                <a href="https://github.com/laibanaeem" target="_blank" class="btn-outline">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub ↗
+                </a>
+                <button class="btn-primary modal-btn" data-modal="modal-1">▶ Watch Video</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- UI/UX -->
+      <div class="portfolio-group reveal">
+        <p class="group-title">UI / UX Design</p>
+        <div class="cards-grid">
+
+          <div class="project-card reveal">
+            <div class="card-thumb">
+              <img src="assets/images/Aj kya pakai ui.png" alt="Ajj Kya Pakai">
+              <div class="card-overlay">
+                <button class="btn-primary modal-btn" data-modal="modal-2">View Visuals</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Ajj Kya Pakai? — Mobile App</h3>
+              <p>A mobile app helping households decide what to cook based on ingredients they already have at home.</p>
+              <div class="card-actions">
+                <a href="https://www.figma.com/design/XzmPwHBydilcn4L87dw4Cs/Ajj-Kya-Pakai-?node-id=4-81&t=z2GqWguiBakbS6l4-1" target="_blank" class="btn-outline">Figma ↗</a>
+                <button class="btn-primary modal-btn" data-modal="modal-2">See Visuals</button>
+              </div>
+            </div>
+          </div>
+
+                    <div class="project-card reveal">
+            <div class="card-thumb">
+              <img src="assets\images\Main Menu.png" alt="Ajj Kya Pakai">
+              <div class="card-overlay">
+                <button class="btn-primary modal-btn" data-modal="modal-2">View Visuals</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Robinson Crusoe — Survival Game UI design</h3>
+              <p>A 3D survival game inspired by the novel, featuring open-world exploration, crafting, and environmental storytelling.</p>
+              <div class="card-actions">
+                <a href="https://www.figma.com/design/XzmPwHBydilcn4L87dw4Cs/Ajj-Kya-Pakai-?node-id=4-81&t=z2GqWguiBakbS6l4-1" target="_blank" class="btn-outline">Figma ↗</a>
+                <button class="btn-primary modal-btn" data-modal="modal-2">See Visuals</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="card-thumb">
+              <img src="assets/images/webdevdesign.png" alt="WebDevDesign">
+              <div class="card-overlay">
+                <button class="btn-primary modal-btn" data-modal="modal-3">View Visuals</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>WebDevDesign — Agency Website</h3>
+              <p>Full-service agency branding and website design, specializing in WordPress development solutions.</p>
+              <div class="card-actions">
+                <a href="https://www.figma.com/design/v4r6868nQi7TZ7woxd6L0l/WebDevDesign?node-id=0-1&t=8Wx6dUvYNFitfHn4-1" target="_blank" class="btn-outline">Figma ↗</a>
+                <button class="btn-primary modal-btn" data-modal="modal-3">See Visuals</button>
+              </div>
+            </div>
+          </div>
+              <div class="project-card reveal">
+            <div class="card-thumb">
+              <img src="assets\images\exithymia.png" alt="WebDevDesign">
+              <div class="card-overlay">
+                <button class="btn-primary modal-btn" data-modal="modal-3">View Visuals</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Exithymia — Indie Escape Game</h3>
+              <p>A tension-filled indie escape house game with atmospheric lighting and psychological horror elements.</p>
+              <div class="card-actions">
+                <a href="https://www.figma.com/design/v4r6868nQi7TZ7woxd6L0l/WebDevDesign?node-id=0-1&t=8Wx6dUvYNFitfHn4-1" target="_blank" class="btn-outline">Figma ↗</a>
+                <button class="btn-primary modal-btn" data-modal="modal-3">See Visuals</button>
+              </div>
+            </div>
+          </div>
+
+     
+
+          <div class="project-card reveal">
+            <div class="card-thumb">
+              <img src="assets/images/intellica image.png" alt="Intellica">
+              <div class="card-overlay">
+                <button class="btn-primary modal-btn" data-modal="modal-7">View Prototype</button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Intellica — LMS Mobile App</h3>
+              <p>A learning management system designed for mobile — clean dashboards, course tracking, and intuitive navigation.</p>
+              <div class="card-actions">
+                <a href="https://www.figma.com/design/QaqpSItTjtWChvnDG1rvoK/Prototype-draft-2?t=qtAzwL4uRG4e3Mwi-0" target="_blank" class="btn-outline">Figma ↗</a>
+                <button class="btn-primary modal-btn" data-modal="modal-7">Prototype</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact">
+    <div class="contact-inner reveal">
+      <div class="contact-info">
+        <p class="section-label">Get In Touch</p>
+        <h2>Let's create something <span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">together</span></h2>
+        <p>Open for freelance projects, collaborations, and full-time opportunities. Drop me a message!</p>
+        <div class="contact-links">
+          <a href="mailto:laibaanaeem002@gmail.com" class="contact-link">
+            <span class="contact-link-icon">✉️</span>
+            laibaanaeem002@gmail.com
+          </a>
+          <a href="tel:+923265676908" class="contact-link">
+            <span class="contact-link-icon">📱</span>
+            +92 326 567 6908
+          </a>
+          <a href="https://www.linkedin.com/in/laiba-naeem-350b92264/" target="_blank" class="contact-link">
+            <span class="contact-link-icon">💼</span>
+            linkedin.com/in/LaibaNaeem
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleForm(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Ahmed Khan" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="ahmed@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell me about your project…" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message →</button>
+        <p id="form-success" style="color:var(--cyan);font-size:.9rem;display:none;">✓ Message sent! I'll be in touch soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
   <footer>
-    <p>© 2026 Laiba 3D. All rights reserved.</p>
+    <span class="logo-text" style="font-size:1rem;">Laiba.3D</span>
+    <span>© 2026 Laiba Naeem. All rights reserved.</span>
   </footer>
 
+  <!-- ============================================================
+       MODALS
+  ============================================================ -->
   <div id="modal-1" class="modal">
     <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>Locked in Time Visuals</h2>
+      <div class="modal-header">
+        <h2>Locked in Time — Gameplay</h2>
+        <button class="close-btn" aria-label="Close">✕</button>
+      </div>
       <div class="modal-gallery">
-        <img src="assets/images/userprofile.png" alt="Game Visual 1">
-        <img src="assets/images/level1.png" alt="Game Visual 2">
-        <img src="assets/images/level2.png" alt="Game Visual 3">
-        <video controls>
-            <source src="assets/images/locked in time.mp4" type="video/mp4">
-            Your browser does not support video.
+        <video controls style="width:100%;border-radius:12px;">
+          <source src="assets/images/locked in time.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+      </div>
+    </div>
+  </div>
+    <div id="modal-12" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Locked in Time — Gameplay</h2>
+        <button class="close-btn" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-gallery">
+        <video controls style="width:100%;border-radius:12px;">
+          <source src="assets\images\lab.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-game2" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Robinson Crusoe — Gameplay</h2>
+        <button class="close-btn" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-gallery">
+        <video controls style="width:100%;border-radius:12px;">
+          <source src="assets/images/robinson_crusoe.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-game3" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Exithymia — Gameplay</h2>
+        <button class="close-btn" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-gallery">
+        <video controls style="width:100%;border-radius:12px;">
+          <source src="assets/images/exithymia.mp4" type="video/mp4">
+          Your browser does not support video.
         </video>
       </div>
     </div>
@@ -198,94 +548,188 @@ Solve puzzles, uncover secrets, and break free before time runs out.</p>
 
   <div id="modal-2" class="modal">
     <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>Ajj Kya Pakai Visuals</h2>
+      <div class="modal-header">
+        <h2>Ajj Kya Pakai? — Visuals</h2>
+        <button class="close-btn" aria-label="Close">✕</button>
+      </div>
       <div class="modal-gallery">
-         <img src="assets/images/Aj kya pakai ui.png" alt="App UI">
-         <p>Additional screenshots can go here...</p>
+        <img src="assets/images/Aj kya pakai ui.png" alt="App UI">
       </div>
     </div>
   </div>
 
   <div id="modal-3" class="modal">
     <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>Web Dev Design Visuals</h2>
+      <div class="modal-header">
+        <h2>WebDevDesign — Visuals</h2>
+        <button class="close-btn" aria-label="Close">✕</button>
+      </div>
       <div class="modal-gallery">
-         <img src="assets/images/webdevdesign.png" alt="Web Design">
+        <img src="assets/images/webdevdesign.png" alt="Web Design">
       </div>
     </div>
   </div>
 
   <div id="modal-4" class="modal">
     <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>3D Lab Visuals</h2>
+      <div class="modal-header">
+        <h2>3D Lab — Visuals</h2>
+        <button class="close-btn" aria-label="Close">✕</button>
+      </div>
       <div class="modal-gallery">
-        <video controls>
-            <source src="assets\images\Screen Recording 2026-01-06 151039.mp4" type="video/mp4">
-            Your browser does not support video.
-        </video>
+        <video controls><source src="assets/images/Screen Recording 2026-01-06 151039.mp4" type="video/mp4">Your browser does not support video.</video>
       </div>
     </div>
   </div>
 
-   <div id="modal-7" class="modal">
+  <div id="modal-7" class="modal">
     <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>Intellica</h2>
+      <div class="modal-header">
+        <h2>Intellica — Prototype</h2>
+        <button class="close-btn" aria-label="Close">✕</button>
+      </div>
       <div class="modal-gallery">
-        <video controls>
-            <source src="assets\images\intellica.mp4" type="video/mp4">
-            Your browser does not support video.
-        </video>
+        <video controls><source src="assets/images/intellica.mp4" type="video/mp4">Your browser does not support video.</video>
       </div>
     </div>
   </div>
 
+  <!-- model-viewer for 3D GLB/GLTF files -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
   <script>
-    // --- Hamburger Menu Script ---
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-links");
+    /* ============================================================
+       PARTICLES CANVAS
+    ============================================================ */
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let W, H, dots = [];
 
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
+    function resize() {
+      W = canvas.width  = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function Dot() {
+      this.x = Math.random() * W;
+      this.y = Math.random() * H;
+      this.r = Math.random() * 1.4 + .4;
+      this.vx = (Math.random() - .5) * .35;
+      this.vy = (Math.random() - .5) * .35;
+      this.alpha = Math.random() * .5 + .15;
+    }
+
+    for (let i = 0; i < 120; i++) dots.push(new Dot());
+
+    function animParticles() {
+      ctx.clearRect(0, 0, W, H);
+      dots.forEach(d => {
+        d.x += d.vx; d.y += d.vy;
+        if (d.x < 0) d.x = W;
+        if (d.x > W) d.x = 0;
+        if (d.y < 0) d.y = H;
+        if (d.y > H) d.y = 0;
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(124,92,252,${d.alpha})`;
+        ctx.fill();
+      });
+      // draw connection lines
+      dots.forEach((a, i) => {
+        dots.slice(i + 1).forEach(b => {
+          const dx = a.x - b.x, dy = a.y - b.y;
+          const dist = Math.sqrt(dx*dx + dy*dy);
+          if (dist < 110) {
+            ctx.beginPath();
+            ctx.moveTo(a.x, a.y);
+            ctx.lineTo(b.x, b.y);
+            ctx.strokeStyle = `rgba(124,92,252,${.12 * (1 - dist/110)})`;
+            ctx.lineWidth = .6;
+            ctx.stroke();
+          }
+        });
+      });
+      requestAnimationFrame(animParticles);
+    }
+    animParticles();
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: .12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ============================================================
+       NAV / HAMBURGER
+    ============================================================ */
+    const ham = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    ham.addEventListener('click', () => {
+      ham.classList.toggle('open');
+      navLinks.classList.toggle('open');
     });
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("show");
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        ham.classList.remove('open');
+        navLinks.classList.remove('open');
       });
     });
 
-    // --- Modal Popup Script ---
-    const modalBtns = document.querySelectorAll('.modal-btn');
-    const modals = document.querySelectorAll('.modal');
-    const closeBtns = document.querySelectorAll('.close-btn');
+    /* active nav highlight */
+    const sections = document.querySelectorAll('section[id]');
+    const navAs = document.querySelectorAll('nav a');
 
-    // Open Modal
-    modalBtns.forEach(btn => {
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      navAs.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--text)' : '';
+      });
+    }, { passive: true });
+
+    /* ============================================================
+       MODALS
+    ============================================================ */
+    document.querySelectorAll('.modal-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const modalId = btn.getAttribute('data-modal');
-        document.getElementById(modalId).style.display = "flex";
+        const m = document.getElementById(btn.dataset.modal);
+        m.classList.add('open');
+        document.body.style.overflow = 'hidden';
       });
     });
 
-    // Close Modal (X button)
-    closeBtns.forEach(btn => {
+    document.querySelectorAll('.close-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        btn.closest('.modal').style.display = "none";
+        btn.closest('.modal').classList.remove('open');
+        document.body.style.overflow = '';
       });
     });
 
-    // Close Modal (Click outside)
-    window.addEventListener('click', (e) => {
+    window.addEventListener('click', e => {
       if (e.target.classList.contains('modal')) {
-        e.target.style.display = "none";
+        e.target.classList.remove('open');
+        document.body.style.overflow = '';
       }
     });
+
+    /* ============================================================
+       CONTACT FORM (demo)
+    ============================================================ */
+    function handleForm(e) {
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      e.target.reset();
+      setTimeout(() => { document.getElementById('form-success').style.display = 'none'; }, 4000);
+    }
   </script>
 </body>
 </html>
-
